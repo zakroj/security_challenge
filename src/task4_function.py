@@ -9,6 +9,8 @@ def lambda_handler(event, context):
         return delete_bucket(event.get('bucket_name'))
     elif event.get('action') == 'list':
         return list_bucket()
+    else:
+        return list_bucket()
 
 def create_bucket(bucket_name, region='eu-central-1'):
     try:
